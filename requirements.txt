@@ -1,6 +1,6 @@
 flask
 tensorflow-cpu
 pandas
-numpy
-
 scikit-learn
+numpy
+gunicorn
