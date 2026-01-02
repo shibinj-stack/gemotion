@@ -1,0 +1,31 @@
+key,hold_time,flight_time,latency,emotion
+u,72.2,80.5,152.7,stressed
+r,68.4,450.2,518.6,stressed
+g,75.1,60.9,136.0,stressed
+e,70.5,55.1,125.6,stressed
+n,67.3,510.4,577.7,stressed
+t,74.0,70.2,144.2,stressed
+!,89.1,45.5,134.6,stressed
+!,71.2,60.8,132.0,stressed
+x,73.4,520.2,593.6,stressed
+x,75.0,50.5,125.5,stressed
+f,65.2,42.5,107.7,stressed
+a,70.4,510.2,580.6,stressed
+s,62.1,38.9,101.0,stressed
+t,73.5,45.1,118.6,stressed
+e,68.3,490.4,558.7,stressed
+r,74.0,35.2,109.2,stressed
+ ,80.1,650.5,730.6,stressed
+n,71.2,42.8,114.0,stressed
+o,63.4,39.2,102.6,stressed
+w,65.0,520.5,585.5,stressed
+h,72.2,80.5,152.7,stressed
+u,68.4,450.2,518.6,stressed
+r,75.1,60.9,136.0,stressed
+r,70.5,55.1,125.6,stressed
+y,67.3,510.4,577.7,stressed
+ ,74.0,70.2,144.2,stressed
+u,89.1,45.5,134.6,stressed
+p,71.2,60.8,132.0,stressed
+!,73.4,520.2,593.6,stressed
+!,75.0,50.5,125.5,stressed

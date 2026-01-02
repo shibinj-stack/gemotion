@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion AI | Keyboard Dynamics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Emotion <span class="accent">AI</span></h1>
+            <p class="subtitle">Privacy-Centric Sentiment Analysis via Typing Rhythm</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="status-bar">
+                    <span class="dot"></span>
+                    <span class="status-text">Secure & Local Analysis</span>
+                </div>
+                
+                <textarea 
+                    id="typingArea" 
+                    placeholder="Start typing naturally here to analyze your mood..."
+                    spellcheck="false"
+                ></textarea>
+
+                <div class="controls">
+                    <button onclick="sendForPrediction()" class="btn-primary">Analyze Emotion</button>
+                    <button onclick="resetBuffer()" class="btn-secondary">Clear</button>
+                </div>
+            </div>
+
+            <div id="resultContainer" class="result-card hidden">
+                <p>Detected Rhythm:</p>
+                <h2 id="result">Waiting for input...</h2>
+            </div>
+            <div id="statsDashboard" class="card hidden" style="margin-top: 2rem;">
+    <h3>Typing Rhythm Analysis</h3>
+    <div class="chart-container" style="position: relative; height:250px; width:100%">
+        <canvas id="rhythmChart"></canvas>
+    </div>
+    <div class="stat-grid">
+        <div class="stat-item">Avg Hold: <span id="avgHold">0</span>ms</div>
+        <div class="stat-item">Avg Flight: <span id="avgFlight">0</span>ms</div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </main>
+
+        <footer>
+            <p>No camera. No microphone. Just your unique rhythm.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/capture.js') }}"></script>
+</body>
+</html>

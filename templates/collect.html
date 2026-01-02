@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collector | Emotion AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Data <span class="accent">Collector</span></h1>
+            <p class="subtitle">Help train the model by typing while feeling a specific emotion.</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="selection-group">
+                    <label for="emotionSelect">Target Emotion:</label>
+                    <select id="emotionSelect">
+                        <option value="happy">Happy</option>
+                        <option value="sad">Sad</option>
+                        <option value="calm">Calm</option>
+                        <option value="stressed">Stressed</option>
+                    </select>
+                </div>
+
+                <div class="status-bar">
+                    <span class="dot"></span>
+                    <span class="status-text">Keystrokes Captured: <strong id="count">0</strong></span>
+                </div>
+                
+                <textarea 
+                    id="typingArea" 
+                    placeholder="Type words that reflect your current state..."
+                    spellcheck="false"
+                ></textarea>
+
+                <div class="controls">
+                    <button onclick="saveBatch()" class="btn-primary">Save to Dataset</button>
+                    <button onclick="log = []; document.getElementById('count').innerText = 0; document.getElementById('typingArea').value = '';" class="btn-secondary">Reset</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p><a href="/" style="color: var(--accent); text-decoration: none;">← Back to Prediction Mode</a></p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/collector.js') }}"></script>
+</body>
+</html>
